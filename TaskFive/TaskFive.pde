@@ -2,13 +2,20 @@
 The code in this sketch will not compile, as it referes to varables which have not yet been declared 
 Please complete task 5 to get this to compile.
 */
+
 int circleSize;
 int counter = 0;
 int rowCounter = 0;
 int numberOfCircles;
+int red;
+int green;
+int blue;
+
 void setup(){
-   size(400,400);
-   
+   size(1200,600);
+   red = 255;
+   green = 255;
+   blue = 255;
    
    numberOfCircles = 30;
    circleSize = width/numberOfCircles;
@@ -23,7 +30,7 @@ void draw(){
   y = circleSize*rowCounter;
  
  // Un-comment this line after completing step 6.a 
- // fill(red,green,blue);
+   fill(red,green,blue);
    
    ellipse(x,y,circleSize,circleSize);
   
@@ -31,6 +38,7 @@ void draw(){
   // First part before the ?-mark, is a conditional. 
   // If this is true, the value after the ?-mark will be assigned. 
   // If not, the last value will.
+  
   counter =  frameCount % numberOfCircles == 0 ? 0 : counter+1;
   rowCounter =  counter==0 ? rowCounter+1:rowCounter;
   
@@ -42,5 +50,7 @@ void draw(){
   // 3 % 3 = 0
  
   //Add the code for 6.c here
-  
+  red = counter == 0 ? (int) random(255): red;
+  green = counter == 0 ? (int) random(255): green;
+  blue = counter == 0 ? (int) random(255): blue;
 }
