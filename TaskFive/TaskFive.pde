@@ -2,16 +2,22 @@
 The code in this sketch will not compile, as it referes to varables which have not yet been declared 
 Please complete task 5 to get this to compile.
 */
+int circleSize;
+int counter = 0;
+int rowCounter = 0;
+int numberOfCircles;
 void setup(){
    size(400,400);
-  
+   
+   
    numberOfCircles = 30;
    circleSize = width/numberOfCircles;
    ellipseMode(CORNER);
   
 }
 void draw(){
-  
+  int x;
+  int y;
  
   x = circleSize*counter;
   y = circleSize*rowCounter;
